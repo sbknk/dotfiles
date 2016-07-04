@@ -24,6 +24,9 @@ alias c='clear'                             # c:            Clear terminal displ
 
 tail () { /usr/bin/tail -f $@ | ccze -A; }
 
+alias vhost='cd ~/vhosts'
+alias vhosts='vhost'
+
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
@@ -60,4 +63,5 @@ alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool fals
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 
-cd ~/vhosts
+# Set default directory in bash
+vhosts
