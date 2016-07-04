@@ -50,6 +50,7 @@
     # Use custom `.gitignore` and `.gitattributes`
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
+    filemode = false
 
 [credential]
     helper = osxkeychain
