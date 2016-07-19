@@ -17,15 +17,13 @@ alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 
-alias edit='subl'                           # edit:         Opens any file in sublime editor
 alias finder='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
 
 tail () { /usr/bin/tail -f $@ | ccze -A; }
 
-alias vhost='cd ~/vhosts'
-alias vhosts='vhost'
+alias vhosts='cd ~/vhosts'
 
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
@@ -62,6 +60,3 @@ alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool fals
 # Hide/show all desktop icons (useful when presenting)
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-
-# Set default directory in bash
-vhosts
