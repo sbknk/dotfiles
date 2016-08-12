@@ -12,7 +12,7 @@ alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp | ccze -A'                       # Preferred 'ls' implementation
 
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
-alias ..='cd ../'                           # Go back 1 directory level
+alias ..='cd ../../'                           # Go back 2 directory level
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
@@ -22,8 +22,7 @@ alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
 
 tail () { /usr/bin/tail -f $@ | ccze -A; }
-
-alias vhosts='cd ~/vhosts'
+vhost () { cd ~/vhosts/$1; }
 
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
