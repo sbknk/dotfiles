@@ -6,7 +6,6 @@
     # `git clean -df`: remove untracked files and directories from the working tree
     # `git stash clear`: remove all stashed states
     trim = !git remote prune origin && git gc
-    cleanup = !git clean -df && git stash clear
 
     d = diff
 
@@ -16,10 +15,11 @@
     # Add untracked, remove deleted, and show status
     adda = !git add -A && git status
 
-    a = "!git add $1 && git status"
+    a = "! git add ./$1 && git status"
     aa = add -a && git status
     ap = add -p
     c = commit -m
+    cp = '! git commit -m && git push'
 
     s = status
     co = checkout
