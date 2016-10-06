@@ -38,6 +38,10 @@ alias lat="ls -AGFoth"
 # Concatenate and print content of files (add line numbers)
 alias catn="cat -n"
 
+# composer aliases
+alias cu="composer update"
+alias ci="composer install"
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
