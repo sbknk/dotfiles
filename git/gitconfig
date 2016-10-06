@@ -16,10 +16,13 @@
     adda = !git add -A && git status
 
     a = "! git add $1 && git status"
-    aa = add -a && git status
+    aa = add -A && git status
+    aacp = "! git add -A && git commit -m $1 && git push"
     ap = add -p
     c = commit -m
-    cp = '! git commit -m && git push'
+    ca = commit --amend --no-edit
+    cp = "! git commit -m $1 && git push"
+    p = push
     m = merge --no-ff --no-edit
 
     s = status
