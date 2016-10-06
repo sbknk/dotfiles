@@ -1,4 +1,4 @@
-# Dotfiles (Nicolas Gallagher)
+# Dotfiles (sbknk)
 
 My OS X dotfiles.
 
@@ -251,7 +251,7 @@ changes made to those submodules.
 
 Inspiration and code was taken from many sources, including:
 
-* [@mathiasbynens](https://github.com/mathiasbynens) (Mathias Bynens)
+* [@necolas](https://github.com/necolas) (Nicolas Gallagher)
   [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [@tejr](https://github.com/tejr) (Tom Ryder)
   [https://github.com/tejr/dotfiles](https://github.com/tejr/dotfiles)
