@@ -40,14 +40,13 @@ alias catn="cat -n"
 
 # composer aliases
 alias cu="composer update"
-alias ci="composer install"
 
 # git aliases
 alias gsall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;"
 
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="$ wget -qO- https://diagnostic.opendns.com/myip"
 alias localip="ipconfig getifaddr en1"
 
 # Copy my public key to the pasteboard
