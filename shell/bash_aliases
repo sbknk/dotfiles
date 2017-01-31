@@ -46,8 +46,8 @@ alias gsall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd 
 
 
 # IP addresses
-alias ip="$ wget -qO- https://diagnostic.opendns.com/myip"
-alias localip="ipconfig getifaddr en1"
+alias ip="wget -qO- https://diagnostic.opendns.com/myip | pbcopy | printf '=> Public IP address copied to pasteboard.\n'"
+alias localip="ipconfig getifaddr en1 | pbcopy | printf '=> Local IP address copied to pasteboard.\n'"
 
 # Copy my public key to the pasteboard
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
