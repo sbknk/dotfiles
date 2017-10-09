@@ -3,7 +3,7 @@
 run_help() {
 
 cat <<EOT
-OS X dotfiles - Nicolas Gallagher - http://nicolasgallagher.com/
+OS X dotfiles - Sebastian Kenk - http://sebastiankenk.de/
 
 Usage: $(basename "$0") [options]
 
@@ -15,7 +15,7 @@ Options:
 
 Documentation can be found at https://github.com/sbknk/dotfiles/
 
-Copyright (c) Nicolas Gallagher
+Copyright (c) Sebastian Kenk
 Licensed under the MIT license.
 EOT
 
