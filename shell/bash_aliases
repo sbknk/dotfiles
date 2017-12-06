@@ -9,7 +9,7 @@ alias sudo="sudo "
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
-alias ll='ls -FGlAhp | ccze -A'                       # Preferred 'ls' implementation
+alias ll='ls -FGlAhp | ccze -A -o nolookups'                       # Preferred 'ls' implementation
 
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../../'                           # Go back 2 directory level
@@ -21,7 +21,7 @@ alias finder='open -a Finder ./'                 # f:            Opens current d
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
 
-tail () { /usr/bin/tail -f $@ | ccze -A; }
+tail () { /usr/bin/tail -f $@ | ccze -A -o nolookups; }
 vhost () { cd ~/vhosts/$1; }
 
 # List dir contents aliases
@@ -66,3 +66,6 @@ alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool fals
 # Hide/show all desktop icons (useful when presenting)
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+
+# Reservix
+alias broker="mysql -h broker.reservix.office -u rxdev -pfcdFXF6jhxRM -D RESERVIERUNG"
