@@ -44,6 +44,13 @@ alias cu="composer update"
 # git aliases
 alias gsall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;"
 
+# delete remote (mine) branches staring with RP-
+alias cleanupmine="git branch -r --merged | grep 'mine/RP-' | sed 's/mine\///' | xargs -n 1 git push --delete mine"
+
+# Reservix
+alias rxup="cd ~/vhosts/core/docker && make up && cd ~/vhosts/portal.docker && make up && make watch"
+alias rxdown="cd ~/vhosts/portal.docker && make down && cd ~/vhosts/core/docker && make down"
+
 
 # IP addresses
 alias ip="wget -qO- https://diagnostic.opendns.com/myip | pbcopy | printf '=> Public IP address copied to pasteboard.\n'"
