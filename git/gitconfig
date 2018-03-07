@@ -25,6 +25,8 @@
     s = status
     co = checkout
     cob = checkout -b
+    sw = switch
+    sy = sync
 
     # list branches sorted by last modified
     b = branches
