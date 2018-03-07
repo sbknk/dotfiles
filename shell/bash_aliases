@@ -47,10 +47,11 @@ alias gsall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd 
 # delete remote (mine) branches staring with RP-
 alias cleanupmine="git branch -r --merged | grep 'mine/RP-' | sed 's/mine\///' | xargs -n 1 git push --delete mine"
 
-# Reservix
-alias rxup="cd ~/vhosts/core/docker && make up && cd ~/vhosts/portal.docker && make up && make watch"
-alias rxdown="cd ~/vhosts/portal.docker && make down && cd ~/vhosts/core/docker && make down"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
+# Reservix
+alias rxup="cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker && make up"
+alias rxdown="cd ~/vhosts/docker && make down && cd ~/vhosts/core/docker && make down"
 
 # IP addresses
 alias ip="wget -qO- https://diagnostic.opendns.com/myip | pbcopy | printf '=> Public IP address copied to pasteboard.\n'"
