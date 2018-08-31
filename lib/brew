@@ -32,6 +32,9 @@ run_brew() {
             'phantomjs'
             'tree'
             'wget'
+            'prettyping'
+            'htop'
+            'tldr'
         )
 
         for index in ${!desired_formulae[*]}
