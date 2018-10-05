@@ -28,8 +28,6 @@ run_brew() {
             'jpeg'
             'macvim --override-system-vim'
             'node'
-            'optipng'
-            'phantomjs'
             'tree'
             'wget'
             'prettyping'
