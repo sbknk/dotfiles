@@ -48,6 +48,10 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 # Reservix
 alias rxup="cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker && make up"
 alias rxdown="cd ~/vhosts/docker && make down && cd ~/vhosts/core/docker && make down"
+alias xdebugCoreOff="sed -i '18s/.*/export CORE_XDEBUG_ENABLE=off/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
+alias xdebugCoreOn="sed -i '18s/.*/export CORE_XDEBUG_ENABLE=on/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
+alias xdebugPortalOff="sed -i '19s/.*/export PORTAL_XDEBUG_ENABLE=off/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
+alias xdebugPortalOn="sed -i '19s/.*/export PORTAL_XDEBUG_ENABLE=on/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
 
 # networking
 alias ip="wget -qO- https://diagnostic.opendns.com/myip | pbcopy | printf '=> Public IP address copied to pasteboard.\n'"
