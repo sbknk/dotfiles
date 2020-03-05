@@ -46,12 +46,12 @@ alias cleanupmine="git branch -r --merged | grep 'mine/RP-' | sed 's/mine\///' |
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # Reservix
-alias rxup="cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker && make up && cd ~/vhosts/core/docker && make build && cd ~/vhosts/portal"
+alias rxup="cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker && make up && cd ~/vhosts/core/docker && cd ~/vhosts/portal"
 alias rxdown="cd ~/vhosts/docker && make down && cd ~/vhosts/core/docker && make down"
 alias coreConfig="cd ~/vhosts/dev-environments && legit sync && ansible-playbook playbook.yml -t config"
 alias xdebugCore="sed -n '/^export CORE_XDEBUG_ENABLE=.*$/p' ~/.bash_profile.local"
-alias xdebugCoreOff="sed -i '' '18s/.*/export CORE_XDEBUG_ENABLE=off/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
-alias xdebugCoreOn="sed -i '' '18s/.*/export CORE_XDEBUG_ENABLE=on/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
+alias xdebugCoreOff="sed -i '' '18s/.*/export CORE_XDEBUG_ENABLE=false/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
+alias xdebugCoreOn="sed -i '' '18s/.*/export CORE_XDEBUG_ENABLE=true/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
 alias xdebugPortal="sed -n '/^export PORTAL_XDEBUG_ENABLE=.*$/p' ~/.bash_profile.local"
 alias xdebugPortalOff="sed -i '' '19s/.*/export PORTAL_XDEBUG_ENABLE=off/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
 alias xdebugPortalOn="sed -i '' '19s/.*/export PORTAL_XDEBUG_ENABLE=on/' ~/.bash_profile.local && source ~/.bash_profile && rxup"
