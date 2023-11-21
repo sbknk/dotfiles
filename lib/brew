@@ -34,7 +34,7 @@ run_brew() {
             'htop'
             'tldr'
             'httpie'
-            'php@7.2'
+            'php@8.2'
         )
 
         for index in ${!desired_formulae[*]}
