@@ -46,11 +46,11 @@ alias cleanupmine="git branch -r --merged | grep 'mine/RP-' | sed 's/mine\///' |
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # Reservix
-alias mitm="cd ~/vhosts/portal-docker && make mitm"
-alias rxup="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/portal-docker && export PORTAL_XDEBUG_ENABLE=off && make up && cd ~/vhosts/portal"
-alias rxupx="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/portal-docker && export PORTAL_XDEBUG_ENABLE=on  && make up && cd ~/vhosts/portal"
-alias rxdown="cd ~/vhosts/portal-docker && make down && cd ~/vhosts/core/docker && make down && cd ~/vhosts/portal"
-alias coreup="rxdown && export CORE_XDEBUG_ENABLE=false && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && cd ~/vhosts/portal-docker && export PORTAL_XDEBUG_ENABLE=off && make up && cd ~/vhosts/portal"
+alias mitm="cd ~/vhosts/docker-portal && make mitm"
+alias rxup="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && cd ~/vhosts/portal"
+alias rxupx="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=on  && make up && cd ~/vhosts/portal"
+alias rxdown="cd ~/vhosts/docker-portal && make down && cd ~/vhosts/core/docker && make down && cd ~/vhosts/portal"
+alias coreup="rxdown && export CORE_XDEBUG_ENABLE=false && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && cd ~/vhosts/portal"
 alias coreupx="rxdown && export CORE_XDEBUG_ENABLE=true && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && rxupx"
 alias ec2Instances="aws ec2 describe-instances --filters Name=tag-key,Values=aws:autoscaling:groupName --query 'Reservations[*].Instances[*].{InstanceID:InstanceId,Name:Tags[?Key==\`aws:autoscaling:groupName\`]|[0].Value}' --output table --profile"
 
