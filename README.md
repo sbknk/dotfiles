@@ -2,7 +2,6 @@
 
 My OS X dotfiles.
 
-
 ## How to install
 
 The installation step requires the [XCode Command Line
@@ -21,10 +20,10 @@ found at the top of the `bin/dotfiles` script.
 
 You should run the update when:
 
-* You make a change to `~/.dotfiles/git/gitconfig` (the only file that is
+- You make a change to `~/.dotfiles/git/gitconfig` (the only file that is
   copied rather than symlinked).
-* You want to pull changes from the remote repository.
-* You want to update Homebrew formulae and Node packages.
+- You want to pull changes from the remote repository.
+- You want to update Homebrew formulae and Node packages.
 
 Run the dotfiles command:
 
@@ -53,44 +52,43 @@ Options:
     </tr>
 </table>
 
-
 ## Features
 
 ### Automatic software installation
 
 Homebrew formulae:
 
-* GNU core utilities
-* [git](http://git-scm.com/)
-* [ack](http://betterthangrep.com/)
-* bash (latest version)
-* [bash-completion](http://bash-completion.alioth.debian.org/)
-* [ffmpeg](http://ffmpeg.org/)
-* [graphicsmagick](http://www.graphicsmagick.org/)
-* [jpeg](https://en.wikipedia.org/wiki/Libjpeg)
-* [macvim](http://code.google.com/p/macvim/)
-* [node](http://nodejs.org/)
-* [rsync](https://rsync.samba.org/) (latest version, rather than the out-dated OS X installation)
-* [tree](http://mama.indstate.edu/users/ice/tree/)
-* [wget](http://www.gnu.org/software/wget/)
+- GNU core utilities
+- [git](http://git-scm.com/)
+- [ack](http://betterthangrep.com/)
+- bash (latest version)
+- [bash-completion](http://bash-completion.alioth.debian.org/)
+- [ffmpeg](http://ffmpeg.org/)
+- [graphicsmagick](http://www.graphicsmagick.org/)
+- [jpeg](https://en.wikipedia.org/wiki/Libjpeg)
+- [macvim](http://code.google.com/p/macvim/)
+- [node](http://nodejs.org/)
+- [rsync](https://rsync.samba.org/) (latest version, rather than the out-dated OS X installation)
+- [tree](http://mama.indstate.edu/users/ice/tree/)
+- [wget](http://www.gnu.org/software/wget/)
 
 Node packages:
 
-* [gify](https://github.com/visionmedia/node-gify)
-* [jshint](http://www.jshint.com/)
-* [yo](http://yeoman.io/)
+- [gify](https://github.com/visionmedia/node-gify)
+- [jshint](http://www.jshint.com/)
+- [yo](http://yeoman.io/)
 
 Vim plugins:
 
-* [ctrlp.vim](https://github.com/kien/ctrlp.vim)
-* [html5.vim](https://github.com/othree/html5.vim)
-* [syntastic](https://github.com/scrooloose/syntastic)
-* [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
-* [vim-git](https://github.com/tpope/vim-git)
-* [vim-javascript](https://github.com/pangloss/vim-javascript)
-* [vim-markdown](https://github.com/tpope/vim-markdown)
-* [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
-* [vim-pathogen](https://github.com/tpope/vim-pathogen)
+- [ctrlp.vim](https://github.com/kien/ctrlp.vim)
+- [html5.vim](https://github.com/othree/html5.vim)
+- [syntastic](https://github.com/scrooloose/syntastic)
+- [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
+- [vim-git](https://github.com/tpope/vim-git)
+- [vim-javascript](https://github.com/pangloss/vim-javascript)
+- [vim-markdown](https://github.com/tpope/vim-markdown)
+- [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
+- [vim-pathogen](https://github.com/tpope/vim-pathogen)
 
 ### Custom OS X defaults
 
@@ -100,21 +98,6 @@ also be applied independently by running the following command:
 ```bash
 $ osxdefaults
 ```
-
-### Bootable backup-drive script
-
-These dotfiles include a script that uses `rsync` to incrementally back up your
-data to an external, bootable clone of your computer's internal drive. First,
-make sure that the value of `DST` in the `bin/backup` script matches the name
-of your backup-drive. Then run the following command:
-
-```bash
-$ backup
-```
-
-For more information on how to setup your backup-drive, please read the
-preparatory steps in this post on creating a [Mac OS X bootable backup
-drive](http://nicolasgallagher.com/mac-osx-bootable-backup-drive-with-rsync/).
 
 ### Custom bash prompt
 
@@ -200,7 +183,6 @@ custom installation's `bin` to the PATH in a file called `~/.dotfilesrc`:
 PATH="/opt/acme/bin:$PATH"
 ```
 
-
 ## Adding new git submodules
 
 If you want to add more git submodules, e.g., Vim plugins to be managed by
@@ -216,7 +198,6 @@ git add vim/bundle/one-submodule
 # Commit the changes
 git commit -m "Add a new submodule: one-submodule"
 ```
-
 
 ## Updating git submodules
 
@@ -244,20 +225,19 @@ using `git submodule update` will update the submodules (that have been
 initialized) in their local repository. N.B This will wipe away any local
 changes made to those submodules.
 
-
 ## Acknowledgements
 
 Inspiration and code was taken from many sources, including:
 
-* [@necolas](https://github.com/necolas) (Nicolas Gallagher)
+- [@necolas](https://github.com/necolas) (Nicolas Gallagher)
   [https://github.com/necolas/dotfiles](https://github.com/necolas/dotfiles)
-* [@mathiasbynens](https://github.com/mathiasbynens) (Mathias Bynens)
+- [@mathiasbynens](https://github.com/mathiasbynens) (Mathias Bynens)
   [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
-* [@tejr](https://github.com/tejr) (Tom Ryder)
+- [@tejr](https://github.com/tejr) (Tom Ryder)
   [https://github.com/tejr/dotfiles](https://github.com/tejr/dotfiles)
-* [@gf3](https://github.com/gf3) (Gianni Chiappetta)
+- [@gf3](https://github.com/gf3) (Gianni Chiappetta)
   [https://github.com/gf3/dotfiles](https://github.com/gf3/dotfiles)
-* [@cowboy](https://github.com/cowboy) (Ben Alman)
+- [@cowboy](https://github.com/cowboy) (Ben Alman)
   [https://github.com/cowboy/dotfiles](https://github.com/cowboy/dotfiles)
-* [@alrra](https://github.com/alrra) (Cãtãlin Mariş)
+- [@alrra](https://github.com/alrra) (Cãtãlin Mariş)
   [https://github.com/alrra/dotfiles](https://github.com/alrra/dotfiles)
