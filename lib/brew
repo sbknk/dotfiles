@@ -26,7 +26,6 @@ run_brew() {
             'ffmpeg'
             'graphicsmagick'
             'jpeg'
-            'macvim --override-system-vim'
             'node'
             'tree'
             'wget'

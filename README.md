@@ -6,7 +6,7 @@ My OS X dotfiles.
 
 The installation step requires the [XCode Command Line
 Tools](https://developer.apple.com/downloads) and may overwrite existing
-dotfiles in your HOME and `.vim` directories.
+dotfiles in your HOME directory.
 
 ```bash
 $ bash -c "$(curl -fsSL raw.github.com/sbknk/dotfiles/master/bin/dotfiles)"
@@ -66,7 +66,6 @@ Homebrew formulae:
 - [ffmpeg](http://ffmpeg.org/)
 - [graphicsmagick](http://www.graphicsmagick.org/)
 - [jpeg](https://en.wikipedia.org/wiki/Libjpeg)
-- [macvim](http://code.google.com/p/macvim/)
 - [node](http://nodejs.org/)
 - [rsync](https://rsync.samba.org/) (latest version, rather than the out-dated OS X installation)
 - [tree](http://mama.indstate.edu/users/ice/tree/)
@@ -77,18 +76,6 @@ Node packages:
 - [gify](https://github.com/visionmedia/node-gify)
 - [jshint](http://www.jshint.com/)
 - [yo](http://yeoman.io/)
-
-Vim plugins:
-
-- [ctrlp.vim](https://github.com/kien/ctrlp.vim)
-- [html5.vim](https://github.com/othree/html5.vim)
-- [syntastic](https://github.com/scrooloose/syntastic)
-- [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
-- [vim-git](https://github.com/tpope/vim-git)
-- [vim-javascript](https://github.com/pangloss/vim-javascript)
-- [vim-markdown](https://github.com/tpope/vim-markdown)
-- [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
-- [vim-pathogen](https://github.com/tpope/vim-pathogen)
 
 ### Custom OS X defaults
 
@@ -136,11 +123,7 @@ Screenshot:
 
 ![](http://i.imgur.com/DSJ1G.png)
 
-### Local/private Bash and Vim configuration
-
-Any special-case Vim directives local to a machine should be stored in a
-`~/.vimrc.local` file on that machine. The directives will then be automatically
-imported into your master `.vimrc`.
+### Local/private Bash configuration
 
 Any private and custom Bash commands and configuration should be placed in a
 `~/.bash_profile.local` file. This file will not be under version control or
@@ -181,43 +164,6 @@ custom installation's `bin` to the PATH in a file called `~/.dotfilesrc`:
 ```bash
 # Add `brew` command's custom location to PATH
 PATH="/opt/acme/bin:$PATH"
-```
-
-## Adding new git submodules
-
-If you want to add more git submodules, e.g., Vim plugins to be managed by
-pathogen, then follow these steps while in the root of the superproject.
-
-```bash
-# Add the new submodule
-git submodule add https://example.com/remote/path/to/repo.git vim/bundle/one-submodule
-# Initialize and clone the submodule
-git submodule update --init
-# Stage the changes
-git add vim/bundle/one-submodule
-# Commit the changes
-git commit -m "Add a new submodule: one-submodule"
-```
-
-## Updating git submodules
-
-Updating individual submodules within the superproject:
-
-```bash
-# Change to the submodule directory
-cd vim/bundle/one-submodule
-# Checkout the desired branch (of the submodule)
-git checkout master
-# Pull from the tip of master (of the submodule - could be any sha or pointer)
-git pull origin master
-# Go back to main dotfiles repo root
-cd ../../..
-# Stage the submodule changes
-git add vim/bundle/one-submodule
-# Commit the submodule changes
-git commit -m "Update submodule 'one-submodule' to the latest version"
-# Push to a remote repository
-git push origin master
 ```
 
 Now, if anyone updates their local repository from the remote repository, then

@@ -52,9 +52,6 @@
 [credential]
     helper = osxkeychain
 
-[diff]
-    tool = mvimdiff
-
 [difftool]
     prompt = false
 

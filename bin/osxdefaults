@@ -39,7 +39,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
-
 # Dock
 # ----------------------------------------------------------------------
 
@@ -49,8 +48,8 @@ defaults write com.apple.dock no-glass -bool true
 # Dock: position the Dock on the bottom
 defaults write com.apple.dock orientation bottom
 
-# Dock: set the icon size of Dock items to 52 pixels
-defaults write com.apple.dock tilesize -int 52
+# Dock: set the icon size of Dock items to 40 pixels
+defaults write com.apple.dock tilesize -int 40
 
 # Dock: show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
