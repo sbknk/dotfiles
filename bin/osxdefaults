@@ -48,8 +48,8 @@ defaults write com.apple.dock no-glass -bool true
 # Dock: position the Dock on the bottom
 defaults write com.apple.dock orientation bottom
 
-# Dock: set the icon size of Dock items to 40 pixels
-defaults write com.apple.dock tilesize -int 40
+# Dock: set the icon size of Dock items to 48 pixels
+defaults write com.apple.dock tilesize -int 48
 
 # Dock: show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true

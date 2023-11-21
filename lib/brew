@@ -34,6 +34,7 @@ run_brew() {
             'tldr'
             'httpie'
             'php@8.2'
+            'iterm2'
         )
 
         for index in ${!desired_formulae[*]}
