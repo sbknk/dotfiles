@@ -40,17 +40,16 @@ alias catn="cat -n"
 # git aliases
 alias gsall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;"
 
-# delete remote (mine) branches staring with RP-
-alias cleanupmine="git branch -r --merged | grep 'mine/RP-' | sed 's/mine\///' | xargs -n 1 git push --delete mine"
-
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # Reservix
+alias portal="cd PORTAL_DIR"
+alias core="cd CORE_DIR"
 alias mitm="cd ~/vhosts/docker-portal && make mitm"
-alias rxup="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && cd ~/vhosts/portal"
-alias rxupx="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=on  && make up && cd ~/vhosts/portal"
-alias rxdown="cd ~/vhosts/docker-portal && make down && cd ~/vhosts/core/docker && make down && cd ~/vhosts/portal"
-alias coreup="rxdown && export CORE_XDEBUG_ENABLE=false && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && cd ~/vhosts/portal"
+alias rxup="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && portal"
+alias rxupx="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=on  && make up && portal"
+alias rxdown="cd ~/vhosts/docker-portal && make down && cd ~/vhosts/core/docker && make down && portal"
+alias coreup="rxdown && export CORE_XDEBUG_ENABLE=false && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && portal"
 alias coreupx="rxdown && export CORE_XDEBUG_ENABLE=true && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && rxupx"
 alias ec2Instances="aws ec2 describe-instances --filters Name=tag-key,Values=aws:autoscaling:groupName --query 'Reservations[*].Instances[*].{InstanceID:InstanceId,Name:Tags[?Key==\`aws:autoscaling:groupName\`]|[0].Value}' --output table --profile"
 
