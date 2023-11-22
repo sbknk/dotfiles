@@ -43,8 +43,8 @@ alias gsall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # Reservix
-alias portal="cd PORTAL_DIR"
-alias core="cd CORE_DIR"
+alias portal='cd $PORTAL_DIR'
+alias core='cd $CORE_DIR'
 alias mitm="cd ~/vhosts/docker-portal && make mitm"
 alias rxup="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && portal"
 alias rxupx="export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=on  && make up && portal"
