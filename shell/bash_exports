@@ -2,9 +2,6 @@
 
 # bash_config
 
-# Make Sublime the default editor
-export EDITOR="subl -n -w"
-
 # Ignore duplicate commands in the history
 export HISTCONTROL=ignoredups
 

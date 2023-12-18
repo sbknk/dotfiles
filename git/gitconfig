@@ -43,7 +43,6 @@
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
     filemode = false
-    editor = subl -n -w
 
 [credential]
     helper = osxkeychain
