@@ -21,7 +21,7 @@ alias finder='open -a Finder ./'            # f:            Opens current direct
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
 
-tail () { /usr/bin/tail -f $@ }
+tail () { /usr/bin/tail -f $@; }
 
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
