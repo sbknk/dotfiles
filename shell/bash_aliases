@@ -49,8 +49,8 @@ alias portalup="rxdown && export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && c
 alias portalupx="rxdown && export CORE_HTTP_PORT= && export CORE_HTTPS_PORT= && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=on && make up && portal"
 alias coreup="rxdown && export CORE_XDEBUG_ENABLE=false && export CORE_HTTP_PORT=80 && export CORE_HTTPS_PORT=443 && cd ~/vhosts/core/docker && make up services=core,redis,core.s3server.dev,nginx"
 alias coreupx="rxdown && export CORE_XDEBUG_ENABLE=true && export CORE_HTTP_PORT=80 && export CORE_HTTPS_PORT=443 && cd ~/vhosts/core/docker && make up services=core,redis,core.s3server.dev,nginx"
-alias rxup="rxdown && export CORE_XDEBUG_ENABLE=false && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && portal"
-alias rxupx="rxdown && export CORE_XDEBUG_ENABLE=true && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && portal"
+alias rxup="rxdown && export CORE_XDEBUG_ENABLE=false && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up services=core,redis,core.s3server.dev,nginx && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && portal"
+alias rxupx="rxdown && export CORE_XDEBUG_ENABLE=true && export CORE_HTTP_PORT=1988 && export CORE_HTTPS_PORT=1989 && cd ~/vhosts/core/docker && make up services=core,redis,core.s3server.dev,nginx && cd ~/vhosts/docker-portal && export PORTAL_XDEBUG_ENABLE=off && make up && portal"
 alias ec2Instances="aws ec2 describe-instances --filters Name=tag-key,Values=aws:autoscaling:groupName --query 'Reservations[*].Instances[*].{InstanceID:InstanceId,Name:Tags[?Key==\`aws:autoscaling:groupName\`]|[0].Value}' --output table --profile"
 
 
