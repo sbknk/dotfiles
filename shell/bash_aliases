@@ -41,7 +41,7 @@ alias gsall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd 
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # Execute core make commands from any directory
-alias core='make -C $CORE_DIR'
+alias core='make -C $CORE_DIR/docker'
 
 # Execute portal make commands from any directory
 alias portal='make -C $PORTAL_DOCKER_DIR'
