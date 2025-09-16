@@ -77,7 +77,7 @@ alias rxupall='rxdown && export CORE_XDEBUG_ENABLE=true && export CORE_HTTP_PORT
 alias rxpull='cd $CORE_DIR && gco master && git pull --prune && cd $PORTAL_DOCKER_DIR && gco dev && git pull --prune'
 
 # Rebuild portal and core images and restart services
-alias rxbuild='rxpull rxup && portal config && portal build && core config && core build && rxup'
+alias rxbuild='rxpull && rxup && portal config && portal build && core config && core build && rxup'
 
 alias ec2Instances="aws ec2 describe-instances --filters Name=tag-key,Values=aws:autoscaling:groupName --query 'Reservations[*].Instances[*].{InstanceID:InstanceId,Name:Tags[?Key==\`aws:autoscaling:groupName\`]|[0].Value}' --output table --profile"
 
